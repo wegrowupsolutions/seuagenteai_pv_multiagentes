@@ -2,41 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Neural AI Interface Design System - Futuristic Blue & Purple Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Neural Network Inspired Colors */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* AI Primary - Deep Neural Blue */
+    --primary: 220 85% 55%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 220 85% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* AI Secondary - Neural Purple */
+    --secondary: 260 75% 25%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Neural Tones */
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* AI Accent - Electric Purple */
+    --accent: 270 85% 60%;
+    --accent-foreground: 210 40% 98%;
+    --accent-glow: 270 85% 70%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 25%;
+    --input: 220 15% 20%;
+    --ring: 220 85% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* AI-Specific Design Tokens */
+    --neural-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --neural-glow: 0 0 20px hsl(var(--primary-glow) / 0.4);
+    --neural-shadow: 0 8px 32px hsl(var(--primary) / 0.2);
+    --neural-border: 1px solid hsl(var(--border));
+    --neural-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Animated Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-neural: linear-gradient(45deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--primary)) 100%);
+
+    /* Neural Animations */
+    --pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --float: float 6s ease-in-out infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +122,63 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--accent) / 0.08) 0%, transparent 50%);
   }
+}
+
+@layer components {
+  .neural-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 ease-out;
+    @apply hover:shadow-[var(--neural-shadow)] hover:border-primary/50;
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  .neural-button {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
+    @apply hover:shadow-[var(--neural-glow)] hover:scale-105;
+    @apply active:scale-95;
+  }
+
+  .neural-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .neural-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: var(--neural-gradient);
+    border-radius: inherit;
+  }
+
+  .neural-glow:hover::before {
+    @apply opacity-10;
+  }
+
+  .floating-orb {
+    @apply absolute w-2 h-2 bg-primary rounded-full opacity-60;
+    animation: var(--float);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .neural-blur {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
