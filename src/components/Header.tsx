@@ -21,7 +21,7 @@ const Header = () => {
               </svg>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gradient">Neural Portals</h1>
+              <h1 className="text-xl font-bold text-gradient">Seu Agente IA</h1>
               <p className="text-xs text-muted-foreground">AI Agent Hub</p>
             </div>
           </div>
