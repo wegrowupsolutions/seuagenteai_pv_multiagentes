@@ -155,7 +155,10 @@ const AgentsGrid = () => {
             <p className="text-muted-foreground mb-6">
               Entre em contato conosco e descubra como a inteligência artificial pode transformar sua empresa.
             </p>
-            <button className="neural-button">
+            <button 
+              className="neural-button"
+              onClick={() => window.open('https://wa.me/5521970066231', '_blank')}
+            >
               Falar com Especialista
             </button>
           </div>
