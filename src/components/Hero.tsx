@@ -33,7 +33,7 @@ const Hero = () => {
         {/* CTA Section */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <div className="text-sm text-muted-foreground">
-            👆 Explore os agentes abaixo
+            👇 Explore os agentes abaixo
           </div>
         </div>
       </div>
