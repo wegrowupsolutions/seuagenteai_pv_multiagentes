@@ -105,7 +105,7 @@ const AgentsGrid = () => {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Teste Nossos Agentes</span>
+            <span className="text-gradient">Seu Agente IA</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Cada agente foi desenvolvido com tecnologia de ponta para resolver desafios específicos do seu negócio.
