@@ -20,7 +20,7 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           <span className="text-gradient">Agentes de IA</span>
           <br />
-          <span className="text-foreground">já é realidade</span>
+          <span className="text-foreground">já é realidade!</span>
         </h1>
 
         {/* Subtitle */}
