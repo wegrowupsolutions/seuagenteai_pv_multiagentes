@@ -89,13 +89,6 @@ const agents = [
     title: 'Agente Psicólogo',
     category: 'Saúde Mental',
     description: 'Suporte psicológico automatizado, triagem de pacientes e acompanhamento terapêutico.'
-  },
-  {
-    id: 'agente-afiliado',
-    icon: aiAnalyticsIcon,
-    title: 'Agente Afiliado',
-    category: 'Marketing de Afiliação',
-    description: 'Gestão de programas de afiliação, otimização de comissões e análise de performance.'
   }
 ];
 
