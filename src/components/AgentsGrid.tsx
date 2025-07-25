@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import AgentCard from './AgentCard';
+import ChatModal from './ChatModal';
 import { 
   Phone, 
   Heart, 
@@ -102,10 +104,19 @@ const agents = [
 ];
 
 const AgentsGrid = () => {
+  const [selectedAgent, setSelectedAgent] = useState<{
+    name: string;
+    category: string;
+  } | null>(null);
+
   const handleTestAgent = (agentId: string) => {
-    console.log(`Testing agent: ${agentId}`);
-    // Aqui você pode implementar a lógica para testar cada agente
-    // Por exemplo, abrir um modal, navegar para uma página específica, etc.
+    const agent = agents.find(a => a.id === agentId);
+    if (agent) {
+      setSelectedAgent({
+        name: agent.title,
+        category: agent.category
+      });
+    }
   };
 
   return (
@@ -150,6 +161,14 @@ const AgentsGrid = () => {
           </div>
         </div>
       </div>
+
+      {/* Chat Modal */}
+      <ChatModal
+        isOpen={selectedAgent !== null}
+        onClose={() => setSelectedAgent(null)}
+        agentName={selectedAgent?.name || ''}
+        agentCategory={selectedAgent?.category || ''}
+      />
     </div>
   );
 };
