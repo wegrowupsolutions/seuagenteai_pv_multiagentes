@@ -10,7 +10,7 @@ interface AgentCardProps {
 
 const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: AgentCardProps) => {
   return (
-    <div className="neural-card neural-glow group relative overflow-hidden">
+    <div className="neural-card neural-glow group relative overflow-hidden h-full flex flex-col">
       {/* Floating Neural Orbs */}
       <div className="absolute top-4 right-4 floating-orb" style={{ animationDelay: '0s' }} />
       <div className="absolute bottom-6 left-6 floating-orb" style={{ animationDelay: '2s' }} />
@@ -20,7 +20,7 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-neural-scan" />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col flex-1">
         {/* Agent Icon */}
         <div className="flex justify-center mb-6">
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -43,14 +43,14 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         </h3>
 
         {/* Agent Description */}
-        <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
           {description}
         </p>
 
         {/* Test Button */}
         <button 
           onClick={onTestAgent}
-          className="neural-button w-full group-hover:shadow-[var(--neural-glow)] group-hover:scale-[1.02] transition-all duration-300"
+          className="neural-button w-full group-hover:shadow-[var(--neural-glow)] group-hover:scale-[1.02] transition-all duration-300 mt-auto"
         >
           <span className="flex items-center justify-center gap-2">
             TESTAR AGORA
