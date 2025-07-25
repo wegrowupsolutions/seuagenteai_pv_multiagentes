@@ -1,12 +1,14 @@
+import { LucideIcon } from 'lucide-react';
+
 interface AgentCardProps {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   category: string;
   onTestAgent: () => void;
 }
 
-const AgentCard = ({ icon, title, description, category, onTestAgent }: AgentCardProps) => {
+const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: AgentCardProps) => {
   return (
     <div className="neural-card neural-glow group relative overflow-hidden">
       {/* Floating Neural Orbs */}
@@ -22,10 +24,8 @@ const AgentCard = ({ icon, title, description, category, onTestAgent }: AgentCar
         {/* Agent Icon */}
         <div className="flex justify-center mb-6">
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <img 
-              src={icon} 
-              alt={title}
-              className="w-12 h-12 object-contain filter drop-shadow-lg"
+            <Icon 
+              className="w-12 h-12 text-primary group-hover:text-accent transition-colors duration-300"
             />
           </div>
         </div>

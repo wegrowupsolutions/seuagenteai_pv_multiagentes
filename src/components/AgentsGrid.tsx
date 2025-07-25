@@ -1,91 +1,100 @@
 import AgentCard from './AgentCard';
-import aiBrainIcon from '@/assets/ai-brain.png';
-import aiChatIcon from '@/assets/ai-chat.png';
-import aiAnalyticsIcon from '@/assets/ai-analytics.png';
-import aiContentIcon from '@/assets/ai-content.png';
-import aiAutomationIcon from '@/assets/ai-automation.png';
+import { 
+  Phone, 
+  Heart, 
+  Home, 
+  Scale, 
+  TrendingUp, 
+  ShoppingCart, 
+  Headphones, 
+  RefreshCw, 
+  Users, 
+  BookOpen, 
+  Smile, 
+  Brain 
+} from 'lucide-react';
 
 const agents = [
   {
     id: 'agente-comercial-sdr',
-    icon: aiChatIcon,
+    icon: Phone,
     title: 'Agente Comercial SDR',
     category: 'Vendas',
     description: 'Especialista em prospecção e qualificação de leads, automatizando o processo de vendas inicial com inteligência artificial.'
   },
   {
     id: 'agente-clinicas',
-    icon: aiBrainIcon,
+    icon: Heart,
     title: 'Agente para Clínicas',
     category: 'Saúde',
     description: 'Gestão inteligente de agendamentos, prontuários e comunicação com pacientes para clínicas médicas.'
   },
   {
     id: 'agente-imobiliarias',
-    icon: aiAnalyticsIcon,
+    icon: Home,
     title: 'Agente Imobiliário',
     category: 'Imóveis',
     description: 'Automatização de captação, qualificação de clientes e gestão de propriedades no mercado imobiliário.'
   },
   {
     id: 'agente-advocacia',
-    icon: aiContentIcon,
+    icon: Scale,
     title: 'Agente para Advocacia',
     category: 'Jurídico',
     description: 'Assistente jurídico para análise de documentos, pesquisa legal e gestão eficiente de casos.'
   },
   {
     id: 'agente-financeiro',
-    icon: aiAnalyticsIcon,
+    icon: TrendingUp,
     title: 'Agente Financeiro SMO',
     category: 'Finanças',
     description: 'Análise financeira, controle de fluxo de caixa e otimização de investimentos empresariais.'
   },
   {
     id: 'agente-vendedor-infoprodutos',
-    icon: aiAutomationIcon,
+    icon: ShoppingCart,
     title: 'Agente Vendedor de Infoprodutos',
     category: 'Marketing Digital',
     description: 'Especialista em vendas de produtos digitais, funis de conversão e marketing automático.'
   },
   {
     id: 'agente-cx',
-    icon: aiChatIcon,
+    icon: Headphones,
     title: 'Agente CX',
     category: 'Experiência do Cliente',
     description: 'Otimização da experiência do cliente através de atendimento inteligente e personalizado.'
   },
   {
     id: 'agente-recuperador-vendas',
-    icon: aiAutomationIcon,
+    icon: RefreshCw,
     title: 'Agente Recuperador de Vendas',
     category: 'Vendas',
     description: 'Recuperação inteligente de carrinho abandonado e reativação de clientes inativos.'
   },
   {
     id: 'agente-recrutamento-rh',
-    icon: aiBrainIcon,
+    icon: Users,
     title: 'Agente de Recrutamento RH',
     category: 'Recursos Humanos',
     description: 'Automatização de processos seletivos, triagem de currículos e gestão de talentos.'
   },
   {
     id: 'agente-escolas-ensino',
-    icon: aiContentIcon,
+    icon: BookOpen,
     title: 'Agente para Escolas',
     category: 'Educação',
     description: 'Gestão educacional, acompanhamento de alunos e comunicação escolar automatizada.'
   },
   {
     id: 'agente-terapeuta',
-    icon: aiChatIcon,
+    icon: Smile,
     title: 'Agente Terapeuta',
     category: 'Bem-estar',
     description: 'Assistente terapêutico para acompanhamento, agendamentos e suporte emocional.'
   },
   {
     id: 'agente-psicologo',
-    icon: aiBrainIcon,
+    icon: Brain,
     title: 'Agente Psicólogo',
     category: 'Saúde Mental',
     description: 'Suporte psicológico automatizado, triagem de pacientes e acompanhamento terapêutico.'
