@@ -55,7 +55,7 @@ const agents = [
   {
     id: 'agente-vendedor-infoprodutos',
     icon: ShoppingCart,
-    title: 'Agente Vendedor de Infoprodutos',
+    title: 'Agente Afiliado',
     category: 'Marketing Digital',
     description: 'Especialista em vendas de produtos digitais, funis de conversão e marketing automático.'
   },
