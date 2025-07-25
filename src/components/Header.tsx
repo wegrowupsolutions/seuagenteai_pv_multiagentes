@@ -26,18 +26,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#agentes" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              Agentes
-            </a>
-            <a href="#sobre" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              Sobre
-            </a>
-            <a href="#contato" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              Contato
-            </a>
-          </nav>
 
           {/* CTA Button */}
           <button className="neural-button text-sm px-4 py-2">
