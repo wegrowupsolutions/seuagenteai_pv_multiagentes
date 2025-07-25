@@ -29,7 +29,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <button className="neural-button text-sm px-4 py-2">
-            Começar Agora
+            Falar com Especialista
           </button>
         </div>
       </div>
