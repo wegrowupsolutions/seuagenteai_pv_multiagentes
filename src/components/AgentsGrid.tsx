@@ -100,7 +100,7 @@ const AgentsGrid = () => {
   };
 
   return (
-    <div className="py-16 px-6">
+    <div className="py-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">

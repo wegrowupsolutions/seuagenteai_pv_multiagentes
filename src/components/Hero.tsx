@@ -30,12 +30,6 @@ const Hero = () => {
           <span className="text-gradient font-semibold">Transforme sua empresa com tecnologia de ponta.</span>
         </p>
 
-        {/* CTA Section */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div className="text-sm text-muted-foreground">
-            👇 Explore os agentes abaixo
-          </div>
-        </div>
       </div>
 
       {/* Animated Background Orbs */}
