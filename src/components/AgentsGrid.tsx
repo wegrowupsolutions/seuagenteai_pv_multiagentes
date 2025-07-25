@@ -7,46 +7,95 @@ import aiAutomationIcon from '@/assets/ai-automation.png';
 
 const agents = [
   {
-    id: 'neural-assistant',
-    icon: aiBrainIcon,
-    title: 'Assistente Neural',
-    category: 'IA Geral',
-    description: 'Agente de IA avançado capaz de compreender contextos complexos e fornecer soluções inteligentes para qualquer desafio empresarial.'
-  },
-  {
-    id: 'chat-specialist',
+    id: 'agente-comercial-sdr',
     icon: aiChatIcon,
-    title: 'Especialista em Conversação',
-    category: 'Atendimento',
-    description: 'Chatbot inteligente com capacidade de manter conversas naturais e resolver dúvidas de clientes com eficiência e personalidade.'
+    title: 'Agente Comercial SDR',
+    category: 'Vendas',
+    description: 'Especialista em prospecção e qualificação de leads, automatizando o processo de vendas inicial com inteligência artificial.'
   },
   {
-    id: 'data-analyst',
-    icon: aiAnalyticsIcon,
-    title: 'Analista de Dados',
-    category: 'Analytics',
-    description: 'Processa grandes volumes de dados, identifica padrões e gera insights acionáveis para tomada de decisões estratégicas.'
-  },
-  {
-    id: 'content-creator',
-    icon: aiContentIcon,
-    title: 'Criador de Conteúdo',
-    category: 'Marketing',
-    description: 'Desenvolve conteúdo criativo e persuasivo para diferentes canais, mantendo consistência de marca e engajamento.'
-  },
-  {
-    id: 'process-automator',
-    icon: aiAutomationIcon,
-    title: 'Automatizador de Processos',
-    category: 'Automação',
-    description: 'Otimiza fluxos de trabalho, elimina tarefas repetitivas e integra sistemas para máxima eficiência operacional.'
-  },
-  {
-    id: 'strategic-advisor',
+    id: 'agente-clinicas',
     icon: aiBrainIcon,
-    title: 'Consultor Estratégico',
-    category: 'Estratégia',
-    description: 'Analisa mercados, identifica oportunidades e fornece recomendações estratégicas baseadas em inteligência artificial avançada.'
+    title: 'Agente para Clínicas',
+    category: 'Saúde',
+    description: 'Gestão inteligente de agendamentos, prontuários e comunicação com pacientes para clínicas médicas.'
+  },
+  {
+    id: 'agente-imobiliarias',
+    icon: aiAnalyticsIcon,
+    title: 'Agente Imobiliário',
+    category: 'Imóveis',
+    description: 'Automatização de captação, qualificação de clientes e gestão de propriedades no mercado imobiliário.'
+  },
+  {
+    id: 'agente-advocacia',
+    icon: aiContentIcon,
+    title: 'Agente para Advocacia',
+    category: 'Jurídico',
+    description: 'Assistente jurídico para análise de documentos, pesquisa legal e gestão eficiente de casos.'
+  },
+  {
+    id: 'agente-financeiro',
+    icon: aiAnalyticsIcon,
+    title: 'Agente Financeiro SMO',
+    category: 'Finanças',
+    description: 'Análise financeira, controle de fluxo de caixa e otimização de investimentos empresariais.'
+  },
+  {
+    id: 'agente-vendedor-infoprodutos',
+    icon: aiAutomationIcon,
+    title: 'Agente Vendedor de Infoprodutos',
+    category: 'Marketing Digital',
+    description: 'Especialista em vendas de produtos digitais, funis de conversão e marketing automático.'
+  },
+  {
+    id: 'agente-cx',
+    icon: aiChatIcon,
+    title: 'Agente CX',
+    category: 'Experiência do Cliente',
+    description: 'Otimização da experiência do cliente através de atendimento inteligente e personalizado.'
+  },
+  {
+    id: 'agente-recuperador-vendas',
+    icon: aiAutomationIcon,
+    title: 'Agente Recuperador de Vendas',
+    category: 'Vendas',
+    description: 'Recuperação inteligente de carrinho abandonado e reativação de clientes inativos.'
+  },
+  {
+    id: 'agente-recrutamento-rh',
+    icon: aiBrainIcon,
+    title: 'Agente de Recrutamento RH',
+    category: 'Recursos Humanos',
+    description: 'Automatização de processos seletivos, triagem de currículos e gestão de talentos.'
+  },
+  {
+    id: 'agente-escolas-ensino',
+    icon: aiContentIcon,
+    title: 'Agente para Escolas',
+    category: 'Educação',
+    description: 'Gestão educacional, acompanhamento de alunos e comunicação escolar automatizada.'
+  },
+  {
+    id: 'agente-terapeuta',
+    icon: aiChatIcon,
+    title: 'Agente Terapeuta',
+    category: 'Bem-estar',
+    description: 'Assistente terapêutico para acompanhamento, agendamentos e suporte emocional.'
+  },
+  {
+    id: 'agente-psicologo',
+    icon: aiBrainIcon,
+    title: 'Agente Psicólogo',
+    category: 'Saúde Mental',
+    description: 'Suporte psicológico automatizado, triagem de pacientes e acompanhamento terapêutico.'
+  },
+  {
+    id: 'agente-afiliado',
+    icon: aiAnalyticsIcon,
+    title: 'Agente Afiliado',
+    category: 'Marketing de Afiliação',
+    description: 'Gestão de programas de afiliação, otimização de comissões e análise de performance.'
   }
 ];
 
