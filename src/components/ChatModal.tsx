@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { X, Send, Mic } from 'lucide-react';
+import { X, Send, Mic, Shield } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from 'sonner';
+import { chatMessageSchema } from '@/lib/validations';
 
 interface ChatModalProps {
   isOpen: boolean;
@@ -16,10 +19,27 @@ interface Message {
 }
 
 const ChatModal = ({ isOpen, onClose, agentName, agentCategory }: ChatModalProps) => {
+  const { user, profile } = useAuth();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Validate and sanitize input using Zod schema
+  const validateMessage = (input: string) => {
+    const result = chatMessageSchema.safeParse({ message: input });
+    
+    if (!result.success) {
+      const errors = result.error.issues.map(err => err.message).join(', ');
+      toast.error(errors);
+      return null;
+    }
+    
+    // Additional sanitization
+    return result.data.message
+      .replace(/[<>]/g, '') // Remove potential HTML tags
+      .trim();
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -46,11 +66,19 @@ const ChatModal = ({ isOpen, onClose, agentName, agentCategory }: ChatModalProps
   }, [isOpen, agentName]);
 
   const handleSendMessage = () => {
-    if (!inputValue.trim()) return;
+    if (!user) {
+      toast.error('Você precisa estar logado para usar o chat');
+      return;
+    }
+
+    const validatedMessage = validateMessage(inputValue);
+    if (!validatedMessage) {
+      return; // Error already shown by validateMessage
+    }
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: inputValue,
+      text: validatedMessage,
       isUser: true,
       timestamp: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
     };
@@ -63,7 +91,7 @@ const ChatModal = ({ isOpen, onClose, agentName, agentCategory }: ChatModalProps
     setTimeout(() => {
       const agentResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: getAgentResponse(agentName, inputValue),
+        text: getAgentResponse(agentName, validatedMessage),
         isUser: false,
         timestamp: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
       };
