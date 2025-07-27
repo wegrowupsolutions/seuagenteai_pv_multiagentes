@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      afiliado: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: number
+          password: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: number
+          password?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: number
+          password?: string | null
+        }
+        Relationships: []
+      }
       agendamentos: {
         Row: {
           data_cancela: string | null
@@ -56,6 +77,48 @@ export type Database = {
           servico?: string | null
           status_agendamento?: string | null
           url_agenda?: string | null
+        }
+        Relationships: []
+      }
+      agente_afiliado_base_leads: {
+        Row: {
+          id: number
+          name: string | null
+          remotejid: string | null
+          timestamp: string | null
+        }
+        Insert: {
+          id?: number
+          name?: string | null
+          remotejid?: string | null
+          timestamp?: string | null
+        }
+        Update: {
+          id?: number
+          name?: string | null
+          remotejid?: string | null
+          timestamp?: string | null
+        }
+        Relationships: []
+      }
+      agente_afiliado_mensagens: {
+        Row: {
+          conversation_history: string | null
+          id: number
+          remotejid: string | null
+          timestamp: string | null
+        }
+        Insert: {
+          conversation_history?: string | null
+          id?: number
+          remotejid?: string | null
+          timestamp?: string | null
+        }
+        Update: {
+          conversation_history?: string | null
+          id?: number
+          remotejid?: string | null
+          timestamp?: string | null
         }
         Relationships: []
       }
@@ -185,15 +248,56 @@ export type Database = {
         }
         Relationships: []
       }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          email: string | null
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_current_user_role: {
+        Args: Record<PropertyKey, never>
+        Returns: Database["public"]["Enums"]["app_role"]
+      }
+      has_role: {
+        Args: { _role: Database["public"]["Enums"]["app_role"] }
+        Returns: boolean
+      }
+      user_owns_remotejid: {
+        Args: { _remotejid: string }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "business_user" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -320,6 +424,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "business_user", "user"],
+    },
   },
 } as const
