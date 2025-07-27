@@ -146,7 +146,7 @@ const ChatModal = ({ isOpen, onClose, agentName, agentCategory }: ChatModalProps
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-card border border-border rounded-xl w-full max-w-sm h-[500px] flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-primary to-accent p-4 text-white">
+        <div className="bg-primary/90 backdrop-blur-sm p-4 text-primary-foreground border-b border-primary/20">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-semibold">{agentName}</h3>
