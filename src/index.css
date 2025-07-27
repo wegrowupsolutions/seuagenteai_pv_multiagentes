@@ -6,40 +6,40 @@
 
 @layer base {
   :root {
-    /* Neural Network Inspired Colors */
-    --background: 220 25% 8%;
-    --foreground: 210 40% 98%;
+    /* Teal/Turquoise Palette */
+    --background: 210 15% 8%;
+    --foreground: 210 10% 98%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 15% 12%;
+    --card-foreground: 210 10% 98%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 15% 12%;
+    --popover-foreground: 210 10% 98%;
 
-    /* AI Primary - Deep Neural Blue */
-    --primary: 220 85% 55%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 220 85% 65%;
+    /* Primary - Bright Turquoise */
+    --primary: 174 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 174 100% 60%;
 
-    /* AI Secondary - Neural Purple */
-    --secondary: 260 75% 25%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Dark Teal */
+    --secondary: 174 100% 30%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Muted Neural Tones */
-    --muted: 220 15% 20%;
-    --muted-foreground: 215 20% 65%;
+    /* Muted - Blue Grey */
+    --muted: 210 15% 20%;
+    --muted-foreground: 210 10% 65%;
 
-    /* AI Accent - Electric Purple */
-    --accent: 270 85% 60%;
-    --accent-foreground: 210 40% 98%;
-    --accent-glow: 270 85% 70%;
+    /* Accent - Medium Teal */
+    --accent: 174 80% 40%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 174 80% 50%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 20%;
-    --ring: 220 85% 55%;
+    --border: 210 15% 25%;
+    --input: 210 15% 18%;
+    --ring: 174 100% 50%;
 
     --radius: 0.75rem;
 
