@@ -51,8 +51,12 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         <button 
           onClick={async () => {
             if (title === 'Agente PetShop') {
-              // Redirect to n8n chat for petshop agent
-              window.open('https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat', '_blank');
+              // Open n8n chat in popup for petshop agent
+              window.open(
+                'https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat', 
+                'petshop-chat',
+                'width=400,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
+              );
             } else {
               // For other agents, use the original behavior
               try {
