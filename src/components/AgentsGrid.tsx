@@ -60,11 +60,11 @@ const agents = [
     description: 'Especialista em vendas de produtos digitais, funis de conversão e marketing automático.'
   },
   {
-    id: 'agente-cx',
-    icon: Headphones,
-    title: 'Agente CX',
-    category: 'Experiência do Cliente',
-    description: 'Otimização da experiência do cliente através de atendimento inteligente e personalizado.'
+    id: 'agente-petshop',
+    icon: Heart,
+    title: 'Agente PetShop',
+    category: 'Animais de Estimação',
+    description: 'Gestão completa para petshops: agendamentos, vendas de produtos e cuidados personalizados para pets.'
   },
   {
     id: 'agente-recuperador-vendas',
