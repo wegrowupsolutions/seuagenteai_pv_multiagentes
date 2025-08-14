@@ -49,7 +49,24 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
 
         {/* Test Button */}
         <button 
-          onClick={onTestAgent}
+          onClick={async () => {
+            try {
+              await fetch('https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  agent: title,
+                  category: category,
+                  timestamp: new Date().toISOString()
+                })
+              });
+            } catch (error) {
+              console.error('Webhook error:', error);
+            }
+            onTestAgent();
+          }}
           className="neural-button w-full group-hover:shadow-[var(--neural-glow)] group-hover:scale-[1.02] transition-all duration-300 mt-auto"
         >
           <span className="flex items-center justify-center gap-2">
