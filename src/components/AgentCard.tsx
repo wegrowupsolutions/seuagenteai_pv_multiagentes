@@ -1,4 +1,6 @@
 import { LucideIcon } from 'lucide-react';
+import { useState } from 'react';
+import N8nChatModal from './N8nChatModal';
 
 interface AgentCardProps {
   icon: LucideIcon;
@@ -9,7 +11,15 @@ interface AgentCardProps {
 }
 
 const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: AgentCardProps) => {
+  const [isN8nChatOpen, setIsN8nChatOpen] = useState(false);
+
   return (
+    <>
+      <N8nChatModal 
+        isOpen={isN8nChatOpen}
+        onClose={() => setIsN8nChatOpen(false)}
+        agentName={title}
+      />
     <div className="neural-card neural-glow group relative overflow-hidden h-full flex flex-col">
       {/* Floating Neural Orbs */}
       <div className="absolute top-4 right-4 floating-orb" style={{ animationDelay: '0s' }} />
@@ -51,12 +61,8 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         <button 
           onClick={async () => {
             if (title === 'Agente PetShop') {
-              // Open n8n chat in popup for petshop agent
-              window.open(
-                'https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat', 
-                'petshop-chat',
-                'width=400,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
-              );
+              // Open n8n chat in modal for petshop agent
+              setIsN8nChatOpen(true);
             } else {
               // For other agents, use the original behavior
               try {
@@ -93,6 +99,7 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         </button>
       </div>
     </div>
+    </>
   );
 };
 
