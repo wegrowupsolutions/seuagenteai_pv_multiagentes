@@ -66,11 +66,6 @@ const ChatModal = ({ isOpen, onClose, agentName, agentCategory }: ChatModalProps
   }, [isOpen, agentName]);
 
   const handleSendMessage = () => {
-    if (!user) {
-      toast.error('Você precisa estar logado para usar o chat');
-      return;
-    }
-
     const validatedMessage = validateMessage(inputValue);
     if (!validatedMessage) {
       return; // Error already shown by validateMessage
