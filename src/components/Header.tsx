@@ -30,7 +30,6 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gradient">Seu Agente IA</h1>
-              <p className="text-xs text-muted-foreground">AI Agent Hub</p>
             </div>
           </div>
 
