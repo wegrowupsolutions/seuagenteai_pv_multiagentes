@@ -15,7 +15,7 @@ const N8nChatModal = ({ isOpen, onClose, agentName }: N8nChatModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-md w-[90vw] h-[600px] p-0 bg-gray-900 border-gray-700 rounded-xl overflow-hidden">
         {/* Header */}
-        <div className="bg-cyan-400 text-gray-900 p-4 flex items-center justify-between">
+        <div className="bg-cyan-400 text-gray-900 p-2 flex items-center justify-between">
           <div>
             <h3 className="font-semibold text-lg">{agentName}</h3>
             <p className="text-sm opacity-80">Online agora</p>
