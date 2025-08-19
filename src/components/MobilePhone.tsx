@@ -42,24 +42,24 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
               </div>
 
               {/* WhatsApp Header */}
-              <div className="absolute top-12 left-0 right-0 h-10 bg-[#075e54] flex items-center px-4 z-10">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center">
-                    <div className="w-4 h-4 rounded-full bg-gradient-to-br from-primary to-accent" />
+              <div className="absolute top-12 left-0 right-0 h-16 bg-[#075e54] flex items-center px-4 z-10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent" />
                   </div>
                   <div>
-                    <h3 className="text-white font-medium text-xs">{agentName}</h3>
-                    <p className="text-green-200 text-[10px]">online</p>
+                    <h3 className="text-white font-medium">{agentName}</h3>
+                    <p className="text-green-200 text-xs">online</p>
                   </div>
                 </div>
               </div>
 
               {/* Chat Container */}
-              <div className="absolute top-22 left-0 right-0 bottom-0 bg-[#e5ddd5]">
+              <div className="absolute top-28 left-0 right-0 bottom-0 bg-[#0a0a0a]">
                 {/* WhatsApp Background Pattern */}
-                <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0 opacity-10">
                   <div className="w-full h-full" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23128c7e' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E")`,
                     backgroundSize: '40px 40px'
                   }} />
                 </div>
@@ -67,9 +67,12 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
                 {/* N8n Chat Iframe */}
                 <iframe
                   src="https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat"
-                  className="w-full h-full border-0 relative z-10 bg-white"
+                  className="w-full h-full border-0 relative z-10"
                   title={`Chat do ${agentName}`}
                   allow="microphone; camera; fullscreen"
+                  style={{
+                    background: 'transparent'
+                  }}
                 />
               </div>
 
