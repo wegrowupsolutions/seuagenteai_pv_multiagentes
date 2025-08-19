@@ -1,6 +1,5 @@
 import { LucideIcon } from 'lucide-react';
-import { useState } from 'react';
-import N8nChatModal from './N8nChatModal';
+import { useNavigate } from 'react-router-dom';
 
 interface AgentCardProps {
   icon: LucideIcon;
@@ -11,15 +10,10 @@ interface AgentCardProps {
 }
 
 const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: AgentCardProps) => {
-  const [isN8nChatOpen, setIsN8nChatOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
-      <N8nChatModal 
-        isOpen={isN8nChatOpen}
-        onClose={() => setIsN8nChatOpen(false)}
-        agentName={title}
-      />
     <div className="neural-card neural-glow group relative overflow-hidden h-full flex flex-col">
       {/* Floating Neural Orbs */}
       <div className="absolute top-4 right-4 floating-orb" style={{ animationDelay: '0s' }} />
@@ -61,8 +55,8 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         <button 
           onClick={async () => {
             if (title === 'Agente PetShop') {
-              // Open n8n chat in modal for petshop agent
-              setIsN8nChatOpen(true);
+              // Navigate to mobile chat page for petshop agent
+              navigate(`/chat/${encodeURIComponent(title)}`);
             } else {
               // For other agents, use the original behavior
               try {
