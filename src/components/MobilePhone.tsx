@@ -55,11 +55,11 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
               </div>
 
               {/* Chat Container */}
-              <div className="absolute top-26 left-0 right-0 bottom-0 bg-[#0a0a0a]">
+              <div className="absolute top-26 left-0 right-0 bottom-0 bg-[#e5ddd5]">
                 {/* WhatsApp Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-20">
                   <div className="w-full h-full" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23128c7e' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E")`,
                     backgroundSize: '40px 40px'
                   }} />
                 </div>
@@ -67,12 +67,9 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
                 {/* N8n Chat Iframe */}
                 <iframe
                   src="https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat"
-                  className="w-full h-full border-0 relative z-10"
+                  className="w-full h-full border-0 relative z-10 bg-white"
                   title={`Chat do ${agentName}`}
                   allow="microphone; camera; fullscreen"
-                  style={{
-                    background: 'transparent'
-                  }}
                 />
               </div>
 
