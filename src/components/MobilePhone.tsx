@@ -42,20 +42,20 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
               </div>
 
               {/* WhatsApp Header */}
-              <div className="absolute top-12 left-0 right-0 h-14 bg-[#075e54] flex items-center px-4 z-10">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent" />
+              <div className="absolute top-12 left-0 right-0 h-10 bg-[#075e54] flex items-center px-4 z-10">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center">
+                    <div className="w-4 h-4 rounded-full bg-gradient-to-br from-primary to-accent" />
                   </div>
                   <div>
-                    <h3 className="text-white font-medium text-sm">{agentName}</h3>
-                    <p className="text-green-200 text-xs">online</p>
+                    <h3 className="text-white font-medium text-xs">{agentName}</h3>
+                    <p className="text-green-200 text-[10px]">online</p>
                   </div>
                 </div>
               </div>
 
               {/* Chat Container */}
-              <div className="absolute top-26 left-0 right-0 bottom-0 bg-[#e5ddd5]">
+              <div className="absolute top-22 left-0 right-0 bottom-0 bg-[#e5ddd5]">
                 {/* WhatsApp Background Pattern */}
                 <div className="absolute inset-0 opacity-20">
                   <div className="w-full h-full" style={{
