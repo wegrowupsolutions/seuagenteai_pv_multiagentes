@@ -32,7 +32,7 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
             <div className="w-full h-full bg-gray-900 rounded-[2.2rem] overflow-hidden relative">
               {/* Status Bar */}
               <div className="absolute top-0 left-0 right-0 h-12 bg-[#075e54] flex items-center justify-between px-4 z-10">
-                <div className="text-white text-sm font-medium">9:41</div>
+                <div className="text-white text-sm font-medium">8:18</div>
                 <div className="flex items-center gap-1">
                   <div className="w-4 h-2 border border-white rounded-sm">
                     <div className="w-3 h-1 bg-white rounded-sm" />
