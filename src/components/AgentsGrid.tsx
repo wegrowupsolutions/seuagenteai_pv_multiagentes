@@ -20,7 +20,7 @@ const agents = [
   {
     id: 'agente-comercial-sdr',
     icon: Phone,
-    title: 'Agente Comercial SDR',
+    title: 'Agente Consultorio Psicológico',
     category: 'Vendas',
     description: 'Especialista em prospecção e qualificação de leads, automatizando o processo de vendas inicial com inteligência artificial.'
   },
