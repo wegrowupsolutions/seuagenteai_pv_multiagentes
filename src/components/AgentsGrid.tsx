@@ -19,10 +19,10 @@ import {
 const agents = [
   {
     id: 'agente-comercial-sdr',
-    icon: Phone,
+    icon: Brain,
     title: 'Agente Consultorio Psicológico',
-    category: 'Vendas',
-    description: 'Especialista em prospecção e qualificação de leads, automatizando o processo de vendas inicial com inteligência artificial.'
+    category: 'Saúde Mental',
+    description: 'Especialista em agendamento de consultas, triagem de pacientes e suporte psicológico automatizado para consultórios.'
   },
   {
     id: 'agente-clinicas',
