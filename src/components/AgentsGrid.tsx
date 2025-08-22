@@ -10,7 +10,7 @@ import {
   ShoppingCart, 
   Headphones, 
   RefreshCw, 
-  Users, 
+  Shield, 
   BookOpen, 
   Smile, 
   Brain 
@@ -75,10 +75,10 @@ const agents = [
   },
   {
     id: 'agente-recrutamento-rh',
-    icon: Users,
-    title: 'Agente de Recrutamento RH',
-    category: 'Recursos Humanos',
-    description: 'Automatização de processos seletivos, triagem de currículos e gestão de talentos.'
+    icon: Shield,
+    title: 'Agente Corretor de Seguros',
+    category: 'Seguros',
+    description: 'Consultoria em seguros, análise de riscos e gestão automatizada de apólices para clientes.'
   },
   {
     id: 'agente-escolas-ensino',
