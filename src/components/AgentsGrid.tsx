@@ -68,10 +68,10 @@ const agents = [
   },
   {
     id: 'agente-recuperador-vendas',
-    icon: RefreshCw,
-    title: 'Agente Recuperador de Vendas',
-    category: 'Vendas',
-    description: 'Recuperação inteligente de carrinho abandonado e reativação de clientes inativos.'
+    icon: Scale,
+    title: 'Agente Advogado',
+    category: 'Jurídico',
+    description: 'Assistente jurídico para análise de contratos, gestão de processos e consultoria legal automatizada.'
   },
   {
     id: 'agente-recrutamento-rh',
