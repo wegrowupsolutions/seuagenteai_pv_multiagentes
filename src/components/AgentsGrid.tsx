@@ -27,7 +27,7 @@ const agents = [
   {
     id: 'agente-clinicas',
     icon: Heart,
-    title: 'Agente para Clínicas',
+    title: 'Agente Consultorio Dentário',
     category: 'Saúde',
     description: 'Gestão inteligente de agendamentos, prontuários e comunicação com pacientes para clínicas médicas.'
   },
