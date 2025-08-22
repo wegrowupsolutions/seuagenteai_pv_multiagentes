@@ -47,10 +47,10 @@ const agents = [
   },
   {
     id: 'agente-financeiro',
-    icon: TrendingUp,
-    title: 'Agente Financeiro SMO',
-    category: 'Finanças',
-    description: 'Análise financeira, controle de fluxo de caixa e otimização de investimentos empresariais.'
+    icon: Smile,
+    title: 'Agente Salão de Estética',
+    category: 'Beleza',
+    description: 'Agendamento de serviços estéticos, gestão de clientes e promoções personalizadas para salões de beleza.'
   },
   {
     id: 'agente-vendedor-infoprodutos',
