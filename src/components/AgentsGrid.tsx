@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AgentCard from './AgentCard';
 import ChatModal from './ChatModal';
 import { 
-  Phone, 
+  Car, 
   Heart, 
   Home, 
   Scale, 
@@ -19,10 +19,10 @@ import {
 const agents = [
   {
     id: 'agente-comercial-sdr',
-    icon: Brain,
-    title: 'Agente Consultorio Psicológico',
-    category: 'Saúde Mental',
-    description: 'Especialista em agendamento de consultas, triagem de pacientes e suporte psicológico automatizado para consultórios.'
+    icon: Car,
+    title: 'Agência de Carros',
+    category: 'Automotivo',
+    description: 'Especialista em vendas de veículos, agendamento de test drives e gestão automatizada de concessionárias.'
   },
   {
     id: 'agente-clinicas',
