@@ -97,7 +97,7 @@ const agents = [
   {
     id: 'agente-psicologo',
     icon: Brain,
-    title: 'Agente Psicólogo',
+    title: 'Agente PsicológicoP',
     category: 'Saúde Mental',
     description: 'Suporte psicológico automatizado, triagem de pacientes e acompanhamento terapêutico.'
   }
