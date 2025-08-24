@@ -3,10 +3,25 @@ import { useNavigate } from 'react-router-dom';
 
 interface MobilePhoneProps {
   agentName: string;
+  webhookUrl?: string;
 }
 
-const MobilePhone = ({ agentName }: MobilePhoneProps) => {
+const MobilePhone = ({ agentName, webhookUrl }: MobilePhoneProps) => {
   const navigate = useNavigate();
+  
+  // Define webhook URLs for different agents
+  const getWebhookUrl = () => {
+    if (webhookUrl) return webhookUrl;
+    
+    switch (agentName) {
+      case 'Agência de Carros':
+        return 'https://webhook.serverwegrowup.com.br/webhook/c1822a5d-f4d4-4f3b-9d9b-0f10df50b700/chat';
+      case 'Agente PetShop':
+        return 'https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat';
+      default:
+        return 'https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat';
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-accent/5 flex items-center justify-center p-4">
@@ -66,7 +81,7 @@ const MobilePhone = ({ agentName }: MobilePhoneProps) => {
 
                 {/* N8n Chat Iframe */}
                 <iframe
-                  src="https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat"
+                  src={getWebhookUrl()}
                   className="w-full h-full border-0 relative z-10"
                   title={`Chat do ${agentName}`}
                   allow="microphone; camera; fullscreen"

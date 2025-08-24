@@ -54,8 +54,8 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         {/* Test Button */}
         <button 
           onClick={async () => {
-            if (title === 'Agente PetShop') {
-              // Navigate to mobile chat page for petshop agent
+            if (title === 'Agente PetShop' || title === 'Agência de Carros') {
+              // Navigate to mobile chat page for these agents
               navigate(`/chat/${encodeURIComponent(title)}`);
             } else {
               // For other agents, use the original behavior
