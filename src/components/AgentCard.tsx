@@ -60,7 +60,7 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
             } else {
               // For other agents, use the original behavior
               try {
-                await fetch('https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat', {
+                await fetch('https://webhook.serverwegrowup.com.br/webhook/c1822a5d-f4d4-4f3b-9d9b-0f10df50b700/chat', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
