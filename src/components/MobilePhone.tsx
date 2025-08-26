@@ -17,6 +17,8 @@ const MobilePhone = ({ agentName, webhookUrl }: MobilePhoneProps) => {
     switch (agentName) {
       case 'Agência de Carros':
         return 'https://webhook.serverwegrowup.com.br/webhook/c1822a5d-f4d4-4f3b-9d9b-0f10df50b700/chat';
+      case 'Agente Consultorio Dentário':
+        return 'https://webhook.serverwegrowup.com.br/webhook/a25204f9-c6f4-4da5-9bc5-80b41bba6bbd/chat';
       case 'Agente PetShop':
       default:
         return 'https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat';

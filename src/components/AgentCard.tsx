@@ -54,7 +54,7 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         {/* Test Button */}
         <button 
           onClick={async () => {
-            if (title === 'Agente PetShop' || title === 'Agência de Carros') {
+            if (title === 'Agente PetShop' || title === 'Agência de Carros' || title === 'Agente Consultorio Dentário') {
               // Navigate to mobile chat page for these agents
               navigate(`/chat/${encodeURIComponent(title)}`);
             } else {
