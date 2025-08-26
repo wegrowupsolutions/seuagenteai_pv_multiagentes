@@ -67,15 +67,6 @@ const Header = () => {
                   Falar com Especialista
                 </button>
                 
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => navigate('/auth')}
-                  className="flex items-center gap-2"
-                >
-                  <LogIn className="w-4 h-4" />
-                  Entrar
-                </Button>
               </>
             )}
           </div>
