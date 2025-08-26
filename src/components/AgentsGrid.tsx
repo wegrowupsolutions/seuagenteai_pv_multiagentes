@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AgentCard from './AgentCard';
 import ChatModal from './ChatModal';
+import { useNavigate } from 'react-router-dom';
 import { 
   Car, 
   Heart, 
@@ -104,6 +105,7 @@ const agents = [
 ];
 
 const AgentsGrid = () => {
+  const navigate = useNavigate();
   const [selectedAgent, setSelectedAgent] = useState<{
     name: string;
     category: string;
@@ -157,7 +159,7 @@ const AgentsGrid = () => {
             </p>
             <button 
               className="neural-button"
-              onClick={() => window.open('https://wa.me/5521970066231', '_blank')}
+              onClick={() => navigate('/chat/Especialista')}
             >
               Falar com Especialista
             </button>
