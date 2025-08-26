@@ -43,7 +43,7 @@ const Header = () => {
                 
                 <button 
                   className="neural-button text-sm px-4 py-2"
-                  onClick={() => window.open('https://wa.me/5521970066231', '_blank')}
+                  onClick={() => navigate('/chat/Especialista')}
                 >
                   Falar com Especialista
                 </button>
@@ -62,7 +62,7 @@ const Header = () => {
               <>
                 <button 
                   className="neural-button text-sm px-4 py-2"
-                  onClick={() => window.open('https://wa.me/5521970066231', '_blank')}
+                  onClick={() => navigate('/chat/Especialista')}
                 >
                   Falar com Especialista
                 </button>
