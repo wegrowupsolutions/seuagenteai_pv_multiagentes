@@ -60,7 +60,7 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
             } else {
               // For other agents, use the original behavior
               try {
-                await fetch('https://webhook.serverwegrowup.com.br/webhook/c1822a5d-f4d4-4f3b-9d9b-0f10df50b700/chat', {
+                const response = await fetch('https://webhook.serverwegrowup.com.br/webhook/c1822a5d-f4d4-4f3b-9d9b-0f10df50b700/chat', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
@@ -71,6 +71,11 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
                     timestamp: new Date().toISOString()
                   })
                 });
+                
+                if (response.ok) {
+                  // Abrir o chat em uma nova janela/aba
+                  window.open('https://webhook.serverwegrowup.com.br/webhook/c1822a5d-f4d4-4f3b-9d9b-0f10df50b700/chat', '_blank');
+                }
               } catch (error) {
                 console.error('Webhook error:', error);
               }
