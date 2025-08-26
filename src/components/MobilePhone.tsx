@@ -30,6 +30,8 @@ const MobilePhone = ({ agentName, webhookUrl }: MobilePhoneProps) => {
         return 'https://webhook.serverwegrowup.com.br/webhook/c4302f36-b020-4657-a934-a246a1503332/chat';
       case 'Agente Corretor de Seguros':
         return 'https://webhook.serverwegrowup.com.br/webhook/8d9a4ae1-a131-42a4-9ae2-0fc14d2079ff/chat';
+      case 'Agente para Escolas':
+        return 'https://webhook.serverwegrowup.com.br/webhook/fb53942d-4e2f-4b12-955f-ffd42b7bc034/chat';
       case 'Agente PetShop':
       default:
         return 'https://webhook.serverwegrowup.com.br/webhook/a6d03774-72d3-43e6-91ae-7eb0c76e0551/chat';
