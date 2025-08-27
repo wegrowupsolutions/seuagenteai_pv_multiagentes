@@ -14,7 +14,8 @@ import {
   Shield, 
   BookOpen, 
   Smile, 
-  Brain 
+  Brain,
+  Dumbbell
 } from 'lucide-react';
 
 const agents = [
@@ -69,7 +70,7 @@ const agents = [
   },
   {
     id: 'agente-recuperador-vendas',
-    icon: Scale,
+    icon: Dumbbell,
     title: 'Agente Academia',
     category: 'Fitness',
     description: 'Gestão completa para academias: agendamentos de treinos, controle de matrículas e acompanhamento personalizado de alunos.'
