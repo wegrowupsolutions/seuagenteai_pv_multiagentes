@@ -54,7 +54,7 @@ const AgentCard = ({ icon: Icon, title, description, category, onTestAgent }: Ag
         {/* Test Button */}
         <button 
           onClick={async () => {
-            if (title === 'Agente PetShop' || title === 'Agência de Carros' || title === 'Agente Consultorio Dentário' || title === 'Agente Imobiliário' || title === 'Agente para Advocacia' || title === 'Agente Salão de Estética' || title === 'Agente Vendedor' || title === 'Agente Advogado' || title === 'Agente Corretor de Seguros' || title === 'Agente para Escolas' || title === 'Agente Terapeuta' || title === 'Agente Consultorio Psicológico') {
+            if (title === 'Agente PetShop' || title === 'Agência de Carros' || title === 'Agente Consultorio Dentário' || title === 'Agente Imobiliário' || title === 'Agente para Advocacia' || title === 'Agente Salão de Estética' || title === 'Agente Vendedor' || title === 'Agente Academia' || title === 'Agente Corretor de Seguros' || title === 'Agente para Escolas' || title === 'Agente Terapeuta' || title === 'Agente Consultorio Psicológico') {
               // Navigate to mobile chat page for these agents
               navigate(`/chat/${encodeURIComponent(title)}`);
             } else {

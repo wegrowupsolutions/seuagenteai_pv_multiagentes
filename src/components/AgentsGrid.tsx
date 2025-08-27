@@ -70,9 +70,9 @@ const agents = [
   {
     id: 'agente-recuperador-vendas',
     icon: Scale,
-    title: 'Agente Advogado',
-    category: 'Jurídico',
-    description: 'Assistente jurídico para análise de contratos, gestão de processos e consultoria legal automatizada.'
+    title: 'Agente Academia',
+    category: 'Fitness',
+    description: 'Gestão completa para academias: agendamentos de treinos, controle de matrículas e acompanhamento personalizado de alunos.'
   },
   {
     id: 'agente-recrutamento-rh',
